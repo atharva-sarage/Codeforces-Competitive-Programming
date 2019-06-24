@@ -1,0 +1,100 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    D. Fafa and Ancient Alphabet
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>Ancient Egyptians are known to have used a large set of symbols <img align="middle" class="tex-formula" src="/predownloaded/b6/d6/b6d6681f908b1205d28e94761d9d29c2f09dffae.png" style="max-width: 100.0%;max-height: 100.0%;"> to write on the walls of the temples. Fafa and Fifa went to one of the temples and found two non-empty words <span class="tex-span"><i>S</i><sub class="lower-index">1</sub></span> and <span class="tex-span"><i>S</i><sub class="lower-index">2</sub></span> of equal lengths on the wall of temple written one below the other. Since this temple is very ancient, some symbols from the words were erased. The symbols in the set <img align="middle" class="tex-formula" src="/predownloaded/b6/d6/b6d6681f908b1205d28e94761d9d29c2f09dffae.png" style="max-width: 100.0%;max-height: 100.0%;"> have equal probability for being in the position of any erased symbol.</p>
+   <p>Fifa challenged Fafa to calculate the probability that <span class="tex-span"><i>S</i><sub class="lower-index">1</sub></span> is lexicographically greater than <span class="tex-span"><i>S</i><sub class="lower-index">2</sub></span>. Can you help Fafa with this task?</p>
+   <p>You know that <img align="middle" class="tex-formula" src="/predownloaded/29/46/2946cadb2a96572d79b9d6ccfd1df32ef7965869.png" style="max-width: 100.0%;max-height: 100.0%;">, i. e. there were <span class="tex-span"><i>m</i></span> distinct characters in Egyptians' alphabet, in this problem these characters are denoted by integers from <span class="tex-span">1</span> to <span class="tex-span"><i>m</i></span> in alphabet order. A word <span class="tex-span"><i>x</i></span> is lexicographically greater than a word <span class="tex-span"><i>y</i></span> of the same length, if the words are same up to some position, and then the word <span class="tex-span"><i>x</i></span> has a larger character, than the word <span class="tex-span"><i>y</i></span>.</p>
+   <p>We can prove that the probability equals to some fraction <img align="middle" class="tex-formula" src="/predownloaded/d1/03/d103fd1a06f9ceea5274b5c54e5d26637f9cd3db.png" style="max-width: 100.0%;max-height: 100.0%;">, where <span class="tex-span"><i>P</i></span> and <span class="tex-span"><i>Q</i></span> are coprime integers, and <img align="middle" class="tex-formula" src="/predownloaded/9a/46/9a468e743c8ada92601bdbd63442362ee859f9da.png" style="max-width: 100.0%;max-height: 100.0%;">. Print as the answer the value <img align="middle" class="tex-formula" src="/predownloaded/6e/e9/6ee9c12d723ecf3803b4606ea9f0370efb21234a.png" style="max-width: 100.0%;max-height: 100.0%;">, i. e. such a non-negative integer less than <span class="tex-span">10<sup class="upper-index">9</sup> + 7</span>, such that <img align="middle" class="tex-formula" src="/predownloaded/99/ed/99edc69f2f16a05c991a200451695df24a9c4a43.png" style="max-width: 100.0%;max-height: 100.0%;">, where <img align="middle" class="tex-formula" src="/predownloaded/f7/13/f713dec103eb82b59ca2ba8163f869cdb22120d0.png" style="max-width: 100.0%;max-height: 100.0%;"> means that <span class="tex-span"><i>a</i></span> and <span class="tex-span"><i>b</i></span> give the same remainders when divided by <span class="tex-span"><i>m</i></span>.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains two integers <span class="tex-span"><i>n</i></span> and <span class="tex-span"><i>m</i></span> (<span class="tex-span">1 ≤ <i>n</i>,  <i>m</i> ≤ 10<sup class="upper-index">5</sup></span>) — the length of each of the two words and the size of the alphabet <img align="middle" class="tex-formula" src="/predownloaded/b6/d6/b6d6681f908b1205d28e94761d9d29c2f09dffae.png" style="max-width: 100.0%;max-height: 100.0%;">, respectively.</p>
+   <p>The second line contains <span class="tex-span"><i>n</i></span> integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span> (<span class="tex-span">0 ≤ <i>a</i><sub class="lower-index"><i>i</i></sub> ≤ <i>m</i></span>) — the symbols of <span class="tex-span"><i>S</i><sub class="lower-index">1</sub></span>. If <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub> = 0</span>, then the symbol at position <span class="tex-span"><i>i</i></span> was erased.</p>
+   <p>The third line contains <span class="tex-span"><i>n</i></span> integers representing <span class="tex-span"><i>S</i><sub class="lower-index">2</sub></span> with the same format as <span class="tex-span"><i>S</i><sub class="lower-index">1</sub></span>.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print the value <img align="middle" class="tex-formula" src="/predownloaded/aa/af/aaaf0e16a50c7c5f29b9b6a6f21987237bc618d1.png" style="max-width: 100.0%;max-height: 100.0%;">, where <span class="tex-span"><i>P</i></span> and <span class="tex-span"><i>Q</i></span> are coprime and <img align="middle" class="tex-formula" src="/predownloaded/d1/03/d103fd1a06f9ceea5274b5c54e5d26637f9cd3db.png" style="max-width: 100.0%;max-height: 100.0%;"> is the answer to the problem.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>1 2<br>0<br>1<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>500000004<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>1 2<br>1<br>0<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>0<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>7 26<br>0 15 12 9 13 0 14<br>11 1 0 13 15 12 0<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>230769233<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>In the first sample, the first word can be converted into (<span class="tex-span">1</span>) or (<span class="tex-span">2</span>). The second option is the only one that will make it lexicographically larger than the second word. So, the answer to the problem will be <img align="middle" class="tex-formula" src="/predownloaded/c6/0f/c60f974eff613b55da6c7f0f0d77be0df522ba07.png" style="max-width: 100.0%;max-height: 100.0%;">, that is <span class="tex-span">500000004</span>, because <img align="middle" class="tex-formula" src="/predownloaded/77/d4/77d439954d7e491b9aefe279ad28f616f7a5fef9.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+   <p>In the second example, there is no replacement for the zero in the second word that will make the first one lexicographically larger. So, the answer to the problem is <img align="middle" class="tex-formula" src="/predownloaded/05/28/0528d82c61a2f1c8805b88515f90171308c59b65.png" style="max-width: 100.0%;max-height: 100.0%;">, that is <span class="tex-span">0</span>.</p>
+  </div>
+ </div>
+ <p> </p>
+</div>

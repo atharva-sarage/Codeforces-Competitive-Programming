@@ -1,0 +1,110 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    C. Cut 'em all!
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>You're given a tree with $$$n$$$ vertices.</p>
+   <p>Your task is to determine the maximum possible number of edges that can be removed in such a way that all the remaining connected components will have even size.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains an integer $$$n$$$ ($$$1 \le n \le 10^5$$$) denoting the size of the tree. </p>
+   <p>The next $$$n - 1$$$ lines contain two integers $$$u$$$, $$$v$$$ ($$$1 \le u, v \le n$$$) each, describing the vertices connected by the $$$i$$$-th edge.</p>
+   <p>It's guaranteed that the given edges form a tree.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Output a single integer $$$k$$$ — the maximum number of edges that can be removed to leave all connected components with even size, or $$$-1$$$ if it is impossible to remove edges in order to satisfy this property.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4<br>2 4<br>4 1<br>3 1<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1</pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3<br>1 2<br>1 3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>-1</pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>10<br>7 1<br>8 4<br>8 10<br>4 7<br>6 5<br>9 3<br>3 5<br>2 10<br>2 5<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>4</pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>2<br>1 2<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>0</pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>In the first example you can remove the edge between vertices $$$1$$$ and $$$4$$$. The graph after that will have two connected components with two vertices in each.</p>
+   <p>In the second example you can't remove edges in such a way that all components have even number of vertices, so the answer is $$$-1$$$.</p>
+  </div>
+ </div>
+ <p> </p>
+</div>

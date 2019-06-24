@@ -1,0 +1,86 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    C. Save Energy!
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>Julia is going to cook a chicken in the kitchen of her dormitory. To save energy, the stove in the kitchen automatically turns off after <span class="tex-span"><i>k</i></span> minutes after turning on.</p>
+   <p>During cooking, Julia goes to the kitchen every <span class="tex-span"><i>d</i></span> minutes and turns on the stove if it is turned off. While the cooker is turned off, it stays warm. The stove switches on and off instantly.</p>
+   <p>It is known that the chicken needs <span class="tex-span"><i>t</i></span> minutes to be cooked on the stove, if it is turned on, and <span class="tex-span">2<i>t</i></span> minutes, if it is turned off. You need to find out, how much time will Julia have to cook the chicken, if it is considered that the chicken is cooked evenly, with constant speed when the stove is turned on and at a constant speed when it is turned off.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The single line contains three integers <span class="tex-span"><i>k</i></span>, <span class="tex-span"><i>d</i></span> and <span class="tex-span"><i>t</i></span> (<span class="tex-span">1 ≤ <i>k</i>, <i>d</i>, <i>t</i> ≤ 10<sup class="upper-index">18</sup></span>).</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print a single number, the total time of cooking in minutes. The relative or absolute error must not exceed <span class="tex-span">10<sup class="upper-index"> - 9</sup></span>.</p>
+   <p>Namely, let's assume that your answer is <span class="tex-span"><i>x</i></span> and the answer of the jury is <span class="tex-span"><i>y</i></span>. The checker program will consider your answer correct if <img align="middle" class="tex-formula" src="/predownloaded/6d/0e/6d0e0677eb2a344531816cb375fcb5e4bf3d8ee9.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3 2 6<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>6.5<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4 2 20<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>20.0<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>In the first example, the chicken will be cooked for 3 minutes on the turned on stove, after this it will be cooked for <img align="middle" class="tex-formula" src="/predownloaded/8c/dc/8cdc651c009bb03db51176874daaa731ef3f89be.png" style="max-width: 100.0%;max-height: 100.0%;">. Then the chicken will be cooked for one minute on a turned off stove, it will be cooked for <img align="middle" class="tex-formula" src="/predownloaded/41/72/417282a3cf53998434b9d846a674bc51a51054e3.png" style="max-width: 100.0%;max-height: 100.0%;">. Thus, after four minutes the chicken will be cooked for <img align="middle" class="tex-formula" src="/predownloaded/fa/9a/fa9a19b719876b3e33386ca08c5f4c77174e38a7.png" style="max-width: 100.0%;max-height: 100.0%;">. Before the fifth minute Julia will turn on the stove and after <span class="tex-span">2.5</span> minutes the chicken will be ready <img align="middle" class="tex-formula" src="/predownloaded/42/ba/42ba4a19353db68d37488a31f56f66f041f15730.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+   <p>In the second example, when the stove is turned off, Julia will immediately turn it on, so the stove will always be turned on and the chicken will be cooked in 20 minutes.</p>
+  </div>
+ </div>
+ <p> </p>
+</div>

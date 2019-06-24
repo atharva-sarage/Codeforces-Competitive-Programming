@@ -1,0 +1,96 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    B. MADMAX
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>As we all know, Max is the best video game player among her friends. Her friends were so jealous of hers, that they created an actual game just to prove that she's not the best at games. The game is played on a directed acyclic graph (a DAG) with <span class="tex-span"><i>n</i></span> vertices and <span class="tex-span"><i>m</i></span> edges. There's a character written on each edge, a lowercase English letter.</p>
+   <center> 
+    <img class="tex-graphics" src="/predownloaded/33/fa/33fa8e714bc7b3205de46cf52f3ee479800f67db.png" style="max-width: 100.0%;max-height: 100.0%;"> 
+   </center>
+   <p>Max and Lucas are playing the game. Max goes first, then Lucas, then Max again and so on. Each player has a marble, initially located at some vertex. Each player in his/her turn should move his/her marble along some edge (a player can move the marble from vertex <span class="tex-span"><i>v</i></span> to vertex <span class="tex-span"><i>u</i></span> if there's an outgoing edge from <span class="tex-span"><i>v</i></span> to <span class="tex-span"><i>u</i></span>). If the player moves his/her marble from vertex <span class="tex-span"><i>v</i></span> to vertex <span class="tex-span"><i>u</i></span>, the "character" of that round is the character written on the edge from <span class="tex-span"><i>v</i></span> to <span class="tex-span"><i>u</i></span>. There's one additional rule; the ASCII code of character of round <span class="tex-span"><i>i</i></span> should be <span class="tex-font-style-bf">greater than or equal</span> to the ASCII code of character of round <span class="tex-span"><i>i</i> - 1</span> (for <span class="tex-span"><i>i</i> &gt; 1</span>). The rounds are numbered for both players together, i. e. Max goes in odd numbers, Lucas goes in even numbers. The player that can't make a move loses the game. The marbles may be at the same vertex at the same time.</p>
+   <p>Since the game could take a while and Lucas and Max have to focus on finding Dart, they don't have time to play. So they asked you, if they both play optimally, who wins the game?</p>
+   <p>You have to determine the winner of the game for all initial positions of the marbles.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line of input contains two integers <span class="tex-span"><i>n</i></span> and <span class="tex-span"><i>m</i></span> (<span class="tex-span">2 ≤ <i>n</i> ≤ 100</span>, <img align="middle" class="tex-formula" src="/predownloaded/bd/80/bd8007444f2883fa93836e448269d9092c4fdad4.png" style="max-width: 100.0%;max-height: 100.0%;">).</p>
+   <p>The next <span class="tex-span"><i>m</i></span> lines contain the edges. Each line contains two integers <span class="tex-span"><i>v</i></span>, <span class="tex-span"><i>u</i></span> and a lowercase English letter <span class="tex-span"><i>c</i></span>, meaning there's an edge from <span class="tex-span"><i>v</i></span> to <span class="tex-span"><i>u</i></span> written <span class="tex-span"><i>c</i></span> on it (<span class="tex-span">1 ≤ <i>v</i>, <i>u</i> ≤ <i>n</i></span>, <span class="tex-span"><i>v</i> ≠ <i>u</i></span>). There's at most one edge between any pair of vertices. It is guaranteed that the graph is acyclic.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print <span class="tex-span"><i>n</i></span> lines, a string of length <span class="tex-span"><i>n</i></span> in each one. The <span class="tex-span"><i>j</i></span>-th character in <span class="tex-span"><i>i</i></span>-th line should be 'A' if Max will win the game in case her marble is initially at vertex <span class="tex-span"><i>i</i></span> and Lucas's marble is initially at vertex <span class="tex-span"><i>j</i></span>, and 'B' otherwise.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4 4<br>1 2 b<br>1 3 a<br>2 4 c<br>3 4 b<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>BAAA<br>ABAA<br>BBBA<br>BBBB<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>5 8<br>5 3 h<br>1 2 c<br>3 1 c<br>3 2 r<br>5 1 r<br>4 3 z<br>5 4 r<br>5 2 h<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>BABBB<br>BBBBB<br>AABBB<br>AAABA<br>AAAAB<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>Here's the graph in the first sample test case:</p>
+   <center> 
+    <img class="tex-graphics" src="/predownloaded/0a/70/0a702e74cc17e7bd6883689cd92afcfd660e51ac.png" style="max-width: 100.0%;max-height: 100.0%;"> 
+   </center>
+   <p>Here's the graph in the second sample test case:</p>
+   <center> 
+    <img class="tex-graphics" src="/predownloaded/9c/bd/9cbddfe764a315048f2e5fcc47edd783e7ee9144.png" style="max-width: 100.0%;max-height: 100.0%;"> 
+   </center>
+  </div>
+ </div>
+ <p> </p>
+</div>

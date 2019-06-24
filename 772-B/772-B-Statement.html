@@ -1,0 +1,91 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    B. Volatile Kite
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>You are given a convex polygon <span class="tex-span"><i>P</i></span> with <span class="tex-span"><i>n</i></span> distinct vertices <span class="tex-span"><i>p</i><sub class="lower-index">1</sub>, <i>p</i><sub class="lower-index">2</sub>, ..., <i>p</i><sub class="lower-index"><i>n</i></sub></span>. Vertex <span class="tex-span"><i>p</i><sub class="lower-index"><i>i</i></sub></span> has coordinates <span class="tex-span">(<i>x</i><sub class="lower-index"><i>i</i></sub>, <i>y</i><sub class="lower-index"><i>i</i></sub>)</span> in the 2D plane. These vertices are listed in clockwise order.</p>
+   <p>You can choose a real number <span class="tex-span"><i>D</i></span> and move each vertex of the polygon a distance of at most <span class="tex-span"><i>D</i></span> from their original positions.</p>
+   <p>Find the maximum value of <span class="tex-span"><i>D</i></span> such that no matter how you move the vertices, the polygon does not intersect itself and stays convex.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line has one integer <span class="tex-span"><i>n</i></span> (<span class="tex-span">4 ≤ <i>n</i> ≤ 1 000</span>) — the number of vertices.</p>
+   <p>The next <span class="tex-span"><i>n</i></span> lines contain the coordinates of the vertices. Line <span class="tex-span"><i>i</i></span> contains two integers <span class="tex-span"><i>x</i><sub class="lower-index"><i>i</i></sub></span> and <span class="tex-span"><i>y</i><sub class="lower-index"><i>i</i></sub></span> (<span class="tex-span"> - 10<sup class="upper-index">9</sup> ≤ <i>x</i><sub class="lower-index"><i>i</i></sub>, <i>y</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">9</sup></span>) — the coordinates of the <span class="tex-span"><i>i</i></span>-th vertex. These points are guaranteed to be given in clockwise order, and will form a strictly convex polygon (in particular, no three consecutive points lie on the same straight line).</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print one real number <span class="tex-span"><i>D</i></span>, which is the maximum real number such that no matter how you move the vertices, the polygon stays convex.</p>
+   <p>Your answer will be considered correct if its absolute or relative error does not exceed <span class="tex-span">10<sup class="upper-index"> - 6</sup></span>.</p>
+   <p>Namely, let's assume that your answer is <span class="tex-span"><i>a</i></span> and the answer of the jury is <span class="tex-span"><i>b</i></span>. The checker program will consider your answer correct if <img align="middle" class="tex-formula" src="/predownloaded/c6/2e/c62ea64d4651240724c5ac4779b671c741edec24.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4<br>0 0<br>0 1<br>1 1<br>1 0<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>0.3535533906<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>6<br>5 0<br>10 0<br>12 -4<br>10 -8<br>5 -8<br>3 -4<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1.0000000000<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>Here is a picture of the first sample</p>
+   <p><img class="tex-graphics" src="/predownloaded/8f/73/8f737928ca9f81d14c2a5e67deaf40a3d3bdfe62.png" style="max-width: 100.0%;max-height: 100.0%;"></p>
+   <p>Here is an example of making the polygon non-convex.</p>
+   <p><img class="tex-graphics" src="/predownloaded/21/1b/211b430e19e6c6407693098952b6d4e04638b0fa.png" style="max-width: 100.0%;max-height: 100.0%;"></p>
+   <p>This is not an optimal solution, since the maximum distance we moved one point is <span class="tex-span"> ≈ 0.4242640687</span>, whereas we can make it non-convex by only moving each point a distance of at most <span class="tex-span"> ≈ 0.3535533906</span>.</p>
+  </div>
+ </div>
+ <p> </p>
+</div>

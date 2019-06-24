@@ -1,0 +1,99 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    A. Recycling Bottles
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>It was recycling day in Kekoland. To celebrate it Adil and Bera went to Central Perk where they can take bottles from the ground and put them into a recycling bin.</p>
+   <p>We can think Central Perk as coordinate plane. There are <span class="tex-span"><i>n</i></span> bottles on the ground, the <span class="tex-span"><i>i</i></span>-th bottle is located at position <span class="tex-span">(<i>x</i><sub class="lower-index"><i>i</i></sub>, <i>y</i><sub class="lower-index"><i>i</i></sub>)</span>. Both Adil and Bera can carry only one bottle at once each. </p>
+   <p>For both Adil and Bera the process looks as follows: </p>
+   <ol> 
+    <li> Choose to stop or to continue to collect bottles. </li>
+    <li> If the choice was to continue then choose some bottle and walk towards it. </li>
+    <li> Pick this bottle and walk to the recycling bin. </li>
+    <li> Go to step <span class="tex-span">1</span>. </li>
+   </ol>
+   <p>Adil and Bera may move independently. They are allowed to pick bottles simultaneously, all bottles may be picked by any of the two, it's allowed that one of them stays still while the other one continues to pick bottles.</p>
+   <p>They want to organize the process such that the total distance they walk (the sum of distance walked by Adil and distance walked by Bera) is minimum possible. Of course, at the end all bottles should lie in the recycling bin.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>First line of the input contains six integers <span class="tex-span"><i>a</i><sub class="lower-index"><i>x</i></sub></span>, <span class="tex-span"><i>a</i><sub class="lower-index"><i>y</i></sub></span>, <span class="tex-span"><i>b</i><sub class="lower-index"><i>x</i></sub></span>, <span class="tex-span"><i>b</i><sub class="lower-index"><i>y</i></sub></span>, <span class="tex-span"><i>t</i><sub class="lower-index"><i>x</i></sub></span> and <span class="tex-span"><i>t</i><sub class="lower-index"><i>y</i></sub></span> (<span class="tex-span">0 ≤ <i>a</i><sub class="lower-index"><i>x</i></sub>, <i>a</i><sub class="lower-index"><i>y</i></sub>, <i>b</i><sub class="lower-index"><i>x</i></sub>, <i>b</i><sub class="lower-index"><i>y</i></sub>, <i>t</i><sub class="lower-index"><i>x</i></sub>, <i>t</i><sub class="lower-index"><i>y</i></sub> ≤ 10<sup class="upper-index">9</sup></span>) — initial positions of Adil, Bera and recycling bin respectively.</p>
+   <p>The second line contains a single integer <span class="tex-span"><i>n</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 100 000</span>) — the number of bottles on the ground.</p>
+   <p>Then follow <span class="tex-span"><i>n</i></span> lines, each of them contains two integers <span class="tex-span"><i>x</i><sub class="lower-index"><i>i</i></sub></span> and <span class="tex-span"><i>y</i><sub class="lower-index"><i>i</i></sub></span> (<span class="tex-span">0 ≤ <i>x</i><sub class="lower-index"><i>i</i></sub>, <i>y</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">9</sup></span>) — position of the <span class="tex-span"><i>i</i></span>-th bottle.</p>
+   <p>It's guaranteed that positions of Adil, Bera, recycling bin and all bottles are distinct.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print one real number — the minimum possible total distance Adil and Bera need to walk in order to put all bottles into recycling bin. Your answer will be considered correct if its absolute or relative error does not exceed <span class="tex-span">10<sup class="upper-index"> - 6</sup></span>.</p>
+   <p>Namely: let's assume that your answer is <span class="tex-span"><i>a</i></span>, and the answer of the jury is <span class="tex-span"><i>b</i></span>. The checker program will consider your answer correct if <img align="middle" class="tex-formula" src="/predownloaded/c8/02/c802c7a196476b344b7b5ed47d4ec45f567c6fa7.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3 1 1 2 0 0<br>3<br>1 1<br>2 1<br>2 3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>11.084259940083<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>5 0 4 2 2 0<br>5<br>5 2<br>3 0<br>5 5<br>3 5<br>3 3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>33.121375178000<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>Consider the first sample.</p>
+   <p>Adil will use the following path: <img align="middle" class="tex-formula" src="/predownloaded/45/42/4542f69d4c5684b025552c6dedd05b493f06a708.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+   <p>Bera will use the following path: <img align="middle" class="tex-formula" src="/predownloaded/6d/1b/6d1bafc34a5c12b4cbeabd0dc83f78bfa59f09ec.png" style="max-width: 100.0%;max-height: 100.0%;">.</p>
+   <p>Adil's path will be <img align="middle" class="tex-formula" src="/predownloaded/ac/17/ac17d331c0e21e3e21fe9ebbf223039c7b521e07.png" style="max-width: 100.0%;max-height: 100.0%;"> units long, while Bera's path will be <img align="middle" class="tex-formula" src="/predownloaded/8a/39/8a39edd0e49b0e29ff99f919cc3039c25c1a29af.png" style="max-width: 100.0%;max-height: 100.0%;"> units long.</p>
+  </div>
+ </div>
+ <p> </p>
+</div>
